@@ -9,7 +9,6 @@ const loginPage = async () => {
     const {data} = await axios.get(
         "https://jsonplaceholder.typicode.com/posts/1"
     )
-   throw new Error(`Could not do it`)
 
     return (<div>
         {JSON.stringify(data)}
