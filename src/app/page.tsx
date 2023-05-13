@@ -1,5 +1,7 @@
+import { AuthRequiredError } from "@/lib/exceptions"
+const session = null
 export default function Home() {
-  console.log("Home");
+  if(!session) throw new AuthRequiredError()
   return (
     <>
       
@@ -7,7 +9,7 @@ export default function Home() {
     <div className='bg-blue text-white'>
       
       <p>
-        I am the truth
+        This is an auth only page
       </p>
       </div>  
           
